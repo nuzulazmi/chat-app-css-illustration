@@ -1,0 +1,17 @@
+:root {
+    --PaleViolet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+    --ModerateViolet-chat-on-the-left: hsl(276, 55%, 52%);
+    --DesaturatedDarkViolet-chat-on-the-right: hsl(271, 15%, 43%);
+    --GrayishBlue-placeholder-text: hsl(206, 6%, 79%);
+    --VeryDarkDesaturatedViolet-main-heading: hsl(271, 36%, 24%);
+    --DarkGrayishViolet-paragraph: hsl(270, 7%, 64%);
+}
+
+* {box-sizing: border-box;margin: 0;}
+
+body {
+    
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
