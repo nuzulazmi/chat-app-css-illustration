@@ -1,15 +1,17 @@
 :root {
-    /*For Text*/
+    /* For Text */
     --PaleViolet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
     --ModerateViolet-chat-on-the-left: hsl(276, 55%, 52%);
     --DesaturatedDarkViolet-chat-on-the-right: hsl(271, 15%, 43%);
     --GrayishBlue-placeholder-text: hsl(206, 6%, 79%);
     --VeryDarkDesaturatedViolet-main-heading: hsl(271, 36%, 24%);
     --DarkGrayishViolet-paragraph: hsl(270, 7%, 64%);
-    /*Gradients (These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:)*/
+    /* Gradients (These two colors are the vibrant 
+    background colors you see throughout the design 
+    and are applied as a linear gradient:) */
     --LightMagenta: hsl(293, 100%, 63%);
     --LightViolet: hsl(264, 100%, 61%);
-    /*Secondary*/
+    /* Secondary */
     --White: hsl(0, 0%, 100%);
     --LightGrayishViolet-app-background: hsl(270, 20%, 96%);
     --VeryDarkDesaturatedViolet-submit-button-background: hsl(271, 36%, 24%);
@@ -20,10 +22,10 @@
 * {box-sizing: border-box;margin: 0;}
 
 body {
-    font-size: 16px;/*Or 1em*/
+    font-size: 16px;/* Or 1em */
     font-family: 'Rubik', sans-serif;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
