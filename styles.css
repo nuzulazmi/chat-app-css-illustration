@@ -22,13 +22,40 @@
 * {box-sizing: border-box;margin: 0;}
 
 body {
-    font-size: 16px;/* Or 1em */
+    font-size: 1em;
     font-family: 'Rubik', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: var(--White);
+}
+
+.mobile {
+    width: 320px;
+    background-color: var(--LightGrayishViolet-app-background);
+    border: 1em solid var(--White);
+    box-shadow: 20px 20px 70px lightgray;
+    border-radius: 3em;
+}
+
+.mobile p {font-size: 0.8em;}
+
+.mobile header {
+    display: flex;
+    align-items: center;
+    color: var(--White);
+    background-image: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+}
+
+.mobile .top-white-radius-box {
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: -0.8em;
+    border-radius: 1.5em;
+    background-color: var(--GrayishBlue-placeholder-text);
 }
 
 .attribution {
