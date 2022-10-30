@@ -32,32 +32,47 @@ body {
     background-color: var(--White);
 }
 
+/*For Mobile*/
 .mobile {
     width: 320px;
     background-color: var(--LightGrayishViolet-app-background);
     border: 1em solid var(--White);
     box-shadow: 20px 20px 70px lightgray;
     border-radius: 3em;
+    position: relative;
 }
 
 .mobile p {font-size: 0.8em;}
 
-.mobile header {
+.mobile .header {
     display: flex;
     align-items: center;
+    padding: 2em 1em 1em;
+    border-radius: 2em 2em 0.4em 0.4em;
     color: var(--White);
     background-image: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+    box-shadow: 0 0.3em 1.5em lightgray;
 }
 
 .mobile .top-white-radius-box {
     width: 150px;
-    height: 30px;
-    margin: 0 auto;
-    margin-top: -0.8em;
-    border-radius: 1.5em;
-    background-color: var(--GrayishBlue-placeholder-text);
+    height: 35px;
+    margin-top: -1em;
+    border-radius: 1em;
+    background-color: var(--White);
+    position: absolute;
+    left: 25%;
 }
 
+.mobile .header img {
+    width:30px;
+    border-radius:50%;
+    border:1px solid white;
+    margin: 0 0.5em;
+}
+
+
+/*Author*/
 .attribution {
     font-size: 11px;
     text-align: center;
