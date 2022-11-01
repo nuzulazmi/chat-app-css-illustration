@@ -73,9 +73,12 @@ body {
 }
 
 .mobile .header i:last-of-type {
-    display: flex;
-    flex-basis: 100px;
+    display: block;
+    width: 10px;
+    text-align: center;
+    margin-left: 95px;
     justify-content: right;
+    cursor: pointer;
 }
 
 /* Main Mobile */
@@ -94,6 +97,62 @@ body {
     box-shadow: 0 5px 5px rgb(231, 231, 231);
     margin: 0.5em 0.5em 0.5em auto;
     border-radius: 15px 15px 5px 15px;
+}
+
+.main .text:nth-of-type(5),
+.main .text:nth-of-type(6) {
+    background-image: linear-gradient(to left, var(--LightViolet), var(--LightMagenta));
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14em;
+    padding: 0.7em 1em;
+}
+
+.main .text:nth-of-type(5) p::before,
+.main .text:nth-of-type(6) p::before {
+    content: "";
+    width: 15px;
+    padding: 0 8px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.main figure, .main figure img {
+    text-align: right;
+    margin: 0 0.2em;
+}
+
+.mobile .main form {
+    background: var(--White);
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+.mobile .main form input {
+    background: var(--White);
+    border-radius: 2em;
+    border: none;
+    outline: none;
+}
+
+.mobile .main form input::placeholder{
+    color: var(--GrayishBlue-placeholder-text);
+}
+
+.mobile .main form button {
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background: var(--VeryDarkDesaturatedViolet-submit-button-background);
+    color: var(--White);
+    padding: 5px 8px;
 }
 
 /*Author*/
