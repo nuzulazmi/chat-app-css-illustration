@@ -35,7 +35,7 @@ body {
     background-color: var(--White);
     margin: 3em auto;
     overflow-x: hidden;
-    transition: 0.8s ease;
+    /*transition: 0.8s ease;*/
 }
 
 /*For Mobile*/
@@ -98,6 +98,18 @@ i {cursor: pointer;}
     border-radius: 15px 15px 15px 5px;
     padding: 0.5em;
     margin: 0.6em;
+    transition: 0.5s;
+    transform-origin: left bottom;
+}
+
+.main:hover .left{
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+.main:hover .right, .main:hover figure {
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
 }
 
 .main .right {
@@ -106,6 +118,8 @@ i {cursor: pointer;}
     box-shadow: 0 5px 5px rgb(231, 231, 231);
     margin: 0.5em 0.5em 0.5em auto;
     border-radius: 15px 15px 5px 15px;
+    transition: 0.5s;
+    transform-origin: right bottom;
 }
 
 .main .text:nth-of-type(5),
@@ -134,8 +148,11 @@ i {cursor: pointer;}
     text-align: right;
     margin: 0 0.2em;
     cursor: pointer;
+    transform-origin: right bottom;
+    transition: 0.5s;
 }
 
+/* Input Text/Message */
 .mobile .main form {
     background: var(--White);
     display: flex;
