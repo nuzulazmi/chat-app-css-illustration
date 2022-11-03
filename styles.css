@@ -31,10 +31,11 @@ body {
     min-height: 100vh;
     background: url(./images/left-bg.png) no-repeat, url(./images/right-bg.png) no-repeat;
     background-position: -150px -10px, bottom right;
-    background-size: 900px 800px, 140vw 160vw;
+    background-size: 900px 800px, 800px 750px;
     background-color: var(--White);
     margin: 3em auto;
     overflow-x: hidden;
+    transition: 0.8s ease;
 }
 
 /*For Mobile*/
@@ -185,6 +186,8 @@ main header h1 {
 @media (min-width: 1200px) {
     body {
         flex-direction: row;
+        background-position: -40px -10px, bottom right;
+        background-size: 900px 800px, 1100px 950px;
     }
 
     main {
