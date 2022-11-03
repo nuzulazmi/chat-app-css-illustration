@@ -29,7 +29,12 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background: url(./images/left-bg.png) no-repeat, url(./images/right-bg.png) no-repeat;
+    background-position: top left, bottom right;
+    background-size: 500px 500px, 500px 500px;
     background-color: var(--White);
+    margin: 3em auto;
+    overflow-x: hidden;
 }
 
 /*For Mobile*/
@@ -157,6 +162,23 @@ i {cursor: pointer;}
     background: var(--VeryDarkDesaturatedViolet-submit-button-background);
     color: var(--White);
     padding: 8px 11px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    text-align: center;
+    line-height: 1.7;
+    color: var(--DarkGrayishViolet-paragraph);
+}
+
+main header h1 {
+    margin: 1.3em 0 0.5em;
+    font-size: 2.8em;
+    color: var(--VeryDarkDesaturatedViolet-main-heading);
 }
 
 /*Author*/
