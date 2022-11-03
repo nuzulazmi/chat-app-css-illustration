@@ -100,11 +100,13 @@ i {cursor: pointer;}
     margin: 0.6em;
     transition: 0.5s;
     transform-origin: left bottom;
+    /*opacity: 1;*/
 }
 
-.main:hover .left{
+.main:hover .left {
     transform: rotate(90deg);
-    transition: transform 0.5s;
+    /*opacity: 0;*/
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .main:hover .right, .main:hover figure {
