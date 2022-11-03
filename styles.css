@@ -30,8 +30,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: url(./images/left-bg.png) no-repeat, url(./images/right-bg.png) no-repeat;
-    background-position: top left, bottom right;
-    background-size: 500px 500px, 500px 500px;
+    background-position: -150px -10px, bottom right;
+    background-size: 900px 800px, 140vw 160vw;
     background-color: var(--White);
     margin: 3em auto;
     overflow-x: hidden;
@@ -164,6 +164,7 @@ i {cursor: pointer;}
     padding: 8px 11px;
 }
 
+/* Main Content */
 main {
     display: flex;
     flex-direction: column;
@@ -179,6 +180,19 @@ main header h1 {
     margin: 1.3em 0 0.5em;
     font-size: 2.8em;
     color: var(--VeryDarkDesaturatedViolet-main-heading);
+}
+
+@media (min-width: 1200px) {
+    body {
+        flex-direction: row;
+    }
+
+    main {
+        margin-left: 10em;
+        text-align: initial;
+        width: 450px;
+        align-items: flex-start;
+    }
 }
 
 /*Author*/
