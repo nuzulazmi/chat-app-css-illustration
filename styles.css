@@ -22,8 +22,8 @@
 * {box-sizing: border-box;margin: 0;}
 
 body {
-    font-size: 1em;
     font-family: 'Rubik', sans-serif;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,19 +33,21 @@ body {
     background-position: -150px -10px, bottom right;
     background-size: 900px 800px, 800px 750px;
     background-color: var(--White);
-    margin: 3em auto;
-    overflow-x: hidden;
-    /*transition: 0.8s ease;*/
+    margin: 2.5em auto;
+    transition: 0.8s ease;
 }
 
 /*For Mobile*/
 .mobile {
     width: 340px;
+    height: fit-content;
     background-color: var(--LightGrayishViolet-app-background);
     border: 1em solid var(--White);
     box-shadow: 15px 20px 70px lightgray;
     border-radius: 3em;
     position: relative;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .mobile p {font-size: 0.8em;}
@@ -91,7 +93,7 @@ i {cursor: pointer;}
 }
 
 /* Main Mobile */
-.main .text, .left {
+.main .text, .main .left {
     width: 190px;
     color: var(--ModerateViolet-chat-on-the-left);
     background-color: hsl(280, 24%, 88%);
@@ -100,18 +102,30 @@ i {cursor: pointer;}
     margin: 0.6em;
     transition: 0.5s;
     transform-origin: left bottom;
-    /*opacity: 1;*/
 }
 
-.main:hover .left {
+.main .left:nth-of-type(1),
+.main .left:nth-of-type(2),
+.main .left:nth-of-type(4) {
+    animation: leftChat 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
     transform: rotate(90deg);
-    /*opacity: 0;*/
-    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
 }
 
-.main:hover .right, .main:hover figure {
-    transform: rotate(-90deg);
-    transition: transform 0.5s;
+.main .left:nth-of-type(2) {animation-delay: 5s;}
+.main .left:nth-of-type(4) {animation-delay: 13s;}
+
+@keyframes leftChat {
+    0% {
+     transform: rotate(90deg);
+     transform-origin: left bottom;
+    }
+    100% {
+     transform: rotate(0deg);
+     opacity: 1;
+    }
 }
 
 .main .right {
@@ -120,12 +134,28 @@ i {cursor: pointer;}
     box-shadow: 0 5px 5px rgb(231, 231, 231);
     margin: 0.5em 0.5em 0.5em auto;
     border-radius: 15px 15px 5px 15px;
-    transition: 0.5s;
     transform-origin: right bottom;
+}
+
+.main .right:nth-of-type(1),
+.main .right:nth-of-type(2) {
+    animation: rightChat 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+
+.main .right:nth-of-type(2) {animation-delay: 11s;}
+
+@keyframes rightChat {
+    0% {transform: rotate(-90deg);}
+    100% {transform: rotate(0deg);opacity: 1;}
 }
 
 .main .text:nth-of-type(5),
 .main .text:nth-of-type(6) {
+    background-color: rgb(176, 150, 176);
     background-image: linear-gradient(to left, var(--LightViolet), var(--LightMagenta));
     color: var(--White);
     display: flex;
@@ -133,7 +163,14 @@ i {cursor: pointer;}
     justify-content: space-between;
     width: 14em;
     padding: 0.7em 1em;
+    transform: translateY(60%);
+    opacity: 0;
+    animation: figure 0.7s;
+    animation-fill-mode: forwards;
 }
+
+.main .text:nth-of-type(5) {animation-delay: 15s;}
+.main .text:nth-of-type(6) {animation-delay: 17s;}
 
 .main .text:nth-of-type(5) p::before,
 .main .text:nth-of-type(6) p::before {
@@ -150,8 +187,16 @@ i {cursor: pointer;}
     text-align: right;
     margin: 0 0.2em;
     cursor: pointer;
-    transform-origin: right bottom;
-    transition: 0.5s;
+    transform: translateY(60%);
+    opacity: 0;
+    animation: figure 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+
+@keyframes figure {
+    0% {transform: translateY(60%);}
+    100% {transform: translateY(0%);opacity: 1;}
 }
 
 /* Input Text/Message */
@@ -194,6 +239,7 @@ main {
     text-align: center;
     line-height: 1.7;
     color: var(--DarkGrayishViolet-paragraph);
+    margin: 0 auto;
 }
 
 main header h1 {
@@ -207,6 +253,7 @@ main header h1 {
         flex-direction: row;
         background-position: -40px -10px, bottom right;
         background-size: 900px 800px, 1100px 950px;
+        margin: 0;
     }
 
     main {
@@ -215,6 +262,9 @@ main header h1 {
         width: 450px;
         align-items: flex-start;
     }
+
+    .mobile {margin-right: 0;}
+
 }
 
 /*Author*/
