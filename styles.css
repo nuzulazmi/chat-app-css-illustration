@@ -59,7 +59,7 @@ i {cursor: pointer;}
     display: flex;
     align-items: center;
     padding: 2.5em 1em 1em;
-    border-radius: 2em 2em 0.4em 0.4em;
+    border-radius: 1.9em 1.9em 0.4em 0.4em;
     color: var(--White);
     background-image: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
     box-shadow: 0 0.3em 1.5em lightgray;
@@ -77,9 +77,9 @@ i {cursor: pointer;}
 }
 
 .mobile .header img {
-    width:30px;
-    border-radius:50%;
-    border:1px solid white;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
     margin: 0 0.5em;
     cursor: pointer;
 }
@@ -119,14 +119,8 @@ i {cursor: pointer;}
 .main .left:nth-of-type(4) {animation-delay: 13s;}
 
 @keyframes leftChat {
-    0% {
-     transform: rotate(90deg);
-     transform-origin: left bottom;
-    }
-    100% {
-     transform: rotate(0deg);
-     opacity: 1;
-    }
+    0% {transform: rotate(90deg);transform-origin: left bottom;}
+    100% {transform: rotate(0deg);opacity: 1;}
 }
 
 .main .right {
