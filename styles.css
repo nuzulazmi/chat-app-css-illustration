@@ -65,14 +65,15 @@ i {cursor: pointer;}
     box-shadow: 0 0.3em 1.5em lightgray;
 }
 
-.mobile .top-white-radius-box {
+.mobile .header::before {
+    content: "";
     width: 160px;
     height: 40px;
-    margin-top: -1em;
     border-radius: 1em;
     background-color: var(--White);
     position: absolute;
     left: 25%;
+    top: -1em;
 }
 
 .mobile .header img {
